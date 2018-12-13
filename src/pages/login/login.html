@@ -1,0 +1,36 @@
+<ion-slides pager="false" autoplay="2000" loop="true" speed="3000" effect="fade">
+		<ion-slide class="slide-background swiper-no-swiping" *ngFor="let background of backgrounds" 
+		[ngStyle]="{'background-image': 'url(' + background +')'}">
+    </ion-slide>
+  </ion-slides>
+<ion-list>
+	<div class="login-container">
+		<img id="bgrimage" src="../../assets/imgs/sa.png" alt="imagem">
+		<ion-row style="height: 120px"></ion-row>
+		<ion-item>
+        <ion-input [(ngModel)]="user"
+                   type="text"
+                   placeholder="Usuário"
+                   clearInput clearOnEdit="false">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="password"
+                   type="password"
+                   placeholder="Senha"
+                   clearInput clearOnEdit="false">
+        </ion-input>
+      </ion-item>
+			<button ion-button block outline color="light" class="login-button" (click)="auth()">Login</button>
+			<button ion-button block outline color="light" class="login-button" (click)="auth()">Cadastre-se</button>
+ 
+  
+		</div>
+
+</ion-list>
+
+<div padding>
+		<button ion-button footer full color="danger" round (click)="auth()">Login</button>
+		<button ion-button footer full color="light" round>Cadastre-se</button>
+   
+</div>

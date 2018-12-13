@@ -1,0 +1,23 @@
+<ion-content padding>
+  <h2>Seja bem vindo! {{user}}</h2>
+  <p>
+   Esse aplicativo foi desenvolvido a fim de substituir o coletor de dados.
+  </p>
+  <p>
+    Para começar, selecione abaixo o programa que deseja iniciar.
+  </p>
+  <div>
+    <ion-list>
+      <ion-item>
+        <ion-label>Programa</ion-label>
+        <ion-select [(ngModel)]="programa">
+          <ion-option value="refeicao">Alimentação</ion-option>
+          <ion-option value="abastecimento">Abastecimento</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div>
+    <button ion-button block color="danger" (click)="navigate()">Iniciar</button>
+  </div>
+</ion-content>

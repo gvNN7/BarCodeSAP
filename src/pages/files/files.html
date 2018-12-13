@@ -1,0 +1,27 @@
+<ion-content padding>
+  <h2>Como você gostaria de exportar o arquivo? </h2>
+  <p>Você tem duas opções: </p>
+  <ion-item>E-mail</ion-item>
+  <ion-item>Pasta interna (Gerenciador de arquivo)</ion-item>
+  <p>
+    Selecione uma das opções abaixo:
+  </p>
+  <div>
+    <ion-list>
+      <ion-item>
+        <ion-label>Exportar para:</ion-label>
+        <ion-select [(ngModel)]="programa" (ngModelChange)="onSelect(programa)">
+          <ion-option value="1">E-mail</ion-option>
+          <ion-option value="2">Pasta interna</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-item *ngFor="let att of anArray; let idx = index">
+        <ion-label color="primary" >E-mail:</ion-label>
+        <ion-input type="text" placeholder="Digite seu e-mail"[(ngModel)]="anArray[idx].value"></ion-input>
+    </ion-item>
+  </div>
+  <div>
+    <button ion-button block (click)="export()">Exportar</button>
+  </div>
+</ion-content>
