@@ -12,7 +12,7 @@ export class HomePage {
 
   }
 
-  refeicao(){
+  navigate(){
     this.navCtrl.push(RefeicaoPage); 
   }
 

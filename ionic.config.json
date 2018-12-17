@@ -1,5 +1,7 @@
 {
   "name": "BarCodeSAP",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

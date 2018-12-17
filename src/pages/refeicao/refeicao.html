@@ -1,8 +1,7 @@
 <ion-content padding>
 	<h2>Controle de Refeição</h2>
 	<p>
-		Selecione o local:
-	</p>
+		Preencha as informações abaixo, para seguir com o controle de refeições</p><br>Selecione o Local:
 	<div>
 		<ion-list>
 			<ion-item>
@@ -12,7 +11,25 @@
 					<ion-option value="obra">Obra</ion-option>
 				</ion-select>
 			</ion-item>
+			<ion-item>
+				<ion-label>Tipo:</ion-label>
+				<ion-select [(ngModel)]="local">
+					<ion-option value="cafe">Café da Manhã</ion-option>
+					<ion-option value="almoco">Almoço</ion-option>
+					<ion-option value="almocoRefri">Almoço com Refri</ion-option>
+					<ion-option value="janta">Janta</ion-option>
+				</ion-select>
+			</ion-item>
+
+			<ion-item>
+				<ion-label fixed>Cód. Barras:</ion-label>
+				<ion-input type="text" value="{{barcode}}"></ion-input>
+				<button ion-button item-right color="dark" clear icon-only (click)="takePhoto()">
+					<ion-icon name="barcode"></ion-icon>
+				</button>
+			</ion-item>
 		</ion-list>
+		<button ion-button block color="danger" (click)="save()">Salvar</button>
 	</div>
 
 </ion-content>

@@ -1,8 +1,9 @@
 <ion-content padding>
   <h2>Como você gostaria de exportar o arquivo? </h2>
-  <p>Você tem duas opções: </p>
-  <ion-item>E-mail</ion-item>
-  <ion-item>Pasta interna (Gerenciador de arquivo)</ion-item>
+  <p>Você tem duas opções: <br>
+  -E-mail<br>
+  -Pasta interna (Gerenciador de arquivo (Dispositivos Android))
+  </p>
   <p>
     Selecione uma das opções abaixo:
   </p>
@@ -18,7 +19,7 @@
     </ion-list>
     <ion-item *ngFor="let att of anArray; let idx = index">
         <ion-label color="primary" >E-mail:</ion-label>
-        <ion-input type="text" placeholder="Digite seu e-mail"[(ngModel)]="anArray[idx].value"></ion-input>
+        <ion-input type="text" placeholder="Digite seu e-mail" [(ngModel)]="email" [(ngModel)]="anArray[idx].value"></ion-input>
     </ion-item>
   </div>
   <div>

@@ -10,6 +10,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { RefeicaoPage } from '../pages/refeicao/refeicao';
 import { FilesPage } from '../pages/files/files';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { EmailComposer } from '@ionic-native/email-composer';
+import { File } from '@ionic-native/file'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -43,6 +46,9 @@ BrowserModule,
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
+    EmailComposer,
+    File,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
