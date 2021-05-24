@@ -1,2 +1,2 @@
 # BarCodeSAP
-BarCode Application used by SAPAULISTA Company
+BarCode Application
